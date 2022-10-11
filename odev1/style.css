@@ -1,0 +1,42 @@
+.header { 
+    height:150px;
+
+    margin-bottom:10px;
+
+    background-color:blue;
+}
+.content {
+    width:690px;
+
+    height:590px;
+
+    background-color:white;
+
+    float:right;
+}
+.sidebar {
+    width:500px;
+
+    height:500px;
+
+    background-color:white;
+
+    float: right;
+}
+.footer {
+    height:70px;
+
+    margin-top:10px;
+
+    background-color:white;
+}
+  .center
+   {
+
+      margin-left:auto;
+      margin-right:auto;
+
+
+
+     
+   }

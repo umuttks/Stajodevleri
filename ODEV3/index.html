@@ -1,0 +1,75 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="sekillendirme.css">
+<script>
+$(document).ready(function(){
+  $("#gizle").click(function(){
+    $('p').hide();
+  });
+  $("#göster").click(function(){
+    $('p').show();
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $(".colorInputColor").click(function(){
+    $("p").fadeOut();
+  });
+$(".colorInputColor").click(function(){
+    $("p").fadeIn();
+  });
+});
+
+</script>
+
+
+</head>
+<body>
+
+
+<div class="wrap">
+ <div class="center">
+	<input type="text" id="colorInputText" size="14">
+	
+	
+	<p><input type="color" id="colorInputColor"></p>
+	
+	<input type="button" id="gizle" value="SAKLA">
+	<input type="button" id="göster" value="GÖSTER">
+	
+	
+	<input type="button"  id="colorButton" value="RENGİ DEĞİŞTİR" 
+	onclick="changeColor()">
+	
+	
+</div>
+</div>
+
+<script>
+ 
+
+  function changeColor() {
+  
+     let color = document.getElementById('colorInputColor').value;
+	 document.body.style.backgroundColor = color;
+	 document.getElementById('colorInputText').value = color;
+	 
+  }
+  
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

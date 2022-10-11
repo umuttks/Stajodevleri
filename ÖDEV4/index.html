@@ -1,0 +1,58 @@
+<html >
+<head>
+  
+   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+ 
+   
+</head>
+<body>
+
+<script>
+	function giris()
+	{
+	var kullanici=document.forms["myform"]["kullanicidi"].value;
+	var sifre = document.forms["myform"]["sifre1"].value;
+	
+	if(kullanici=="admin"||kullanici=="ADMİN")
+	{
+	   if(sifre=="123")
+	        {
+               			
+			alert("giriş başarılı");
+			
+			location.href = 'file:///C:/Users/Asus/Desktop/ÖDEV4/admin.html';
+			
+			}
+			else
+			{
+			alert("KULLLANICI ADI VEYA ŞİFRE HATALI");
+			}
+	}
+	else
+	{
+	
+	alert("KULLANICI ADI VEYA ŞİFRE HATALI");
+	
+	
+	
+	}
+}
+
+
+
+</script>
+
+
+    <form name= "myform" class="login-form">
+	   <legend class="header">
+        <h3>
+          YÖNETİM PANELİ
+        </h3>
+      </legend>
+		<input class = "input" type="text" name="kullanicidi" placeholder="KULLANICI ADI">
+		<input class = "input" type="password" name="sifre1" placeholder="ŞİFRE">
+		<p><button class = "btn" type="button" onclick="giris()">GİRİŞ YAP</button></p>
+</body>
+
+ 
+</html>

@@ -1,0 +1,57 @@
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="jconfirmaction.jquery.js"></script>
+<style type="text/css" src="style.css"></style>
+
+<button class="button">HABERLERİ GÖSTER</button>	
+
+</head>
+<body>
+
+<table class="table" id="data" border="5px"></table>
+
+
+<script>
+
+
+<!--function myFunction() { if (confirm("SİLMEK İSTEDİĞİMİZE EMİN MİSİNİZ?") == true) { } else {   }-->
+
+     function satirisil(o) {
+     var p=o.parentNode.parentNode;
+         p.parentNode.removeChild(p);
+    }
+
+</script>
+
+<script class=".tr"> 
+
+$("button").click(function() {
+$(document).ready(function(){
+    $.ajax({
+        type: "GET",
+        url: "https://www.milliyet.com.tr/rss/rssnew/gundemrss.xml", 
+        dataType: "xml",
+        success: function(xml) {
+		    
+            $(xml).find('item').each(function(){    
+                var Col0 = $(this).find('title').text();
+                var Col1 = $(this).find('description').text();
+               
+                $('<tr></tr>').html('<tr><tr><td>'+Col0+'<input id ="btnsil" type="button" float="right" value="SATIRI SİL" onclick="satirisil(this)"></td></tr><tr><td>'+Col1+'<input type="button" value="SATIRI SİL" onclick="satirisil(this)"></td></tr></tr>').appendTo('#data');
+				
+				});
+				}
+				
+				});
+				
+				});
+				
+		}); 
+
+</script>
+
+
+</body>
+</html>
